@@ -1,0 +1,137 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+}
+.header{
+  background: linear-gradient(210.09deg, rgb(110, 251, 124) 31.28%, rgb(83, 176, 228) 65.92%);
+}
+.top-header{
+  min-width:100%;
+  min-height: auto;
+  padding: 1%;
+}
+.right-header{
+  margin-left: auto;
+}
+.right-header a{
+  text-decoration: none;
+  margin-left: 15px;
+  color: #9b6efb;
+}
+.navbar-option ul{
+  list-style: none;
+  background-color: rgb(83, 176, 228);
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+.navbar-option ul li{
+  font-size: 30px;
+  padding-top:25px;
+  padding-bottom: 25px;
+}
+.content h2{
+  float: left;
+  padding-left: 2%;
+}
+.item-menu {
+  width: 200px;
+  height: 150px;
+  background-color: #61dafb;
+}
+.option-tittle{
+  display: none;
+}
+.navbar-option ul .option :hover {
+  background-color: rgb(110, 251, 124);
+  border-radius: 5px;
+}
+.navbar-option ul  :hover .option-tittle{
+  display: block;
+}
+.option-content{
+  max-width: 100%;
+}
+.cardtittle{
+  font-size: 35px;
+  min-height: 200px;
+  background: linear-gradient(210.09deg, rgb(216, 76, 198) 31.28%, rgb(83, 176, 228) 65.92%);
+  font-weight: 700;
+  color: #fff;
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+  border: none;
+}
+.tittle{
+  padding-top: 2%;
+  padding-bottom: 4%;
+}
+.icon{
+  color:#fff ;
+}
+.bell-icon{
+  position: relative;
+}
+.noti{
+  width: 150px;
+  height: 150px;
+  border: #282c34 solid 1px;
+  position: absolute;
+  top: 35px;
+  right: 0px;
+  background-color: #FFF;
+  /* display: none; */
+  visibility: hidden;
+  z-index: 1;
+}
+.noti :hover{
+  /* display: block; */
+  visibility: visible;
+}
+.btn-view{
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  background: linear-gradient(210.09deg, rgb(216, 76, 198) 31.28%, rgb(83, 176, 228) 65.92%);
+  color: #FFF;
+  font-size: 18px;
+  border: #FFF;
+}
+.img-wapper{
+  border: none;
+}
