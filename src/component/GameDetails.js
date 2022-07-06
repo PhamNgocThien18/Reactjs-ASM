@@ -93,30 +93,5 @@ class GameDetail extends Component {
      }
   }
 }
-// const DishDetail = (props) => {
-
-//   if (this.props.dish != null) {
-
-//     return (
-//       <div className="container">
-//         <div className="row">
-//           <div className="col-12">
-//             <h3>{props.dish.name}</h3>
-//             <hr />
-//           </div>
-//         </div>
-//         <div className="row">
-//           <RenderDish dish={props.dish} />
-//         </div>
-//       </div>
-//     )
-//   }
-//   else {
-//     return (
-//       <div></div>
-//     );
-//   }
-
-// }
 
 export default GameDetail;

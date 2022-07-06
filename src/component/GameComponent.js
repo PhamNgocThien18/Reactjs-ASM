@@ -33,7 +33,7 @@ class  GameComponent extends Component {
                     <ul>
                         <li className="option"><Link to='/menu'><span className=" fa fa-home fa-lg"><p className="option-tittle">Home</p></span></Link></li>
                         <li className="option active"><Link to='/game'><span className="icon fa fa-gamepad fa-lg"><p className="option-tittle">Game</p></span></Link></li>
-                        <li className="option"><Link to='/aboutus'><span className="fa fa-user fa-lg"><p className="option-tittle">About</p></span></Link></li>
+                        <li className="option"><Link to='/aboutus'><span className="fa fa-user fa-lg"><p className="option-tittle">Feed Back</p></span></Link></li>
                         <li className="option"><Link to='/contact'><span className="fa fa-user fa-lg"><p className="option-tittle">Contact</p></span></Link></li>
                     </ul>
                 </div>
