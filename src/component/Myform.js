@@ -72,7 +72,6 @@ class MyForm extends Component {
     render(){
         const errors = this.validate(this.state.firstname, this.state.lastname,this.state.telnum,this.state.email);
         return(
-            
             <div className="col-12 container">
              <div className="col-12 col-md-9">
                  <Form onSubmit={this.handleSubmit}>
@@ -172,5 +171,4 @@ class MyForm extends Component {
         );
     }
 }
-
 export default MyForm;
