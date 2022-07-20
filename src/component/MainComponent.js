@@ -1,13 +1,23 @@
 import React, { Component } from 'react';
 import HeadComponent from './HeadComponent';
-import MenuComponent from './MenuComponent';
+import HomeComponent from './HomeComponent';
 import GameComponent from './GameComponent';
-import AboutComponent from './AboutusComponent';
-import DishDetail from './DishDetail';
+import FeedbackComponent from './FeedbackComponent';
+import SubjectDetail from './SubjectDetail';
 import GameDetail from './GameDetails';
-import { Route, Switch,Redirect } from 'react-router-dom';
+import ChickenComponent from './ChickendComponent';
+import FooterComponent from './FooterComponent';
+import { Route, Switch,Redirect, withRouter } from 'react-router-dom';
 import { DISHES } from '../shared/dishes';
 import { GAMES } from '../shared/game';
+import {connect} from 'react-redux'
+
+const mapStateToProps = state =>{
+    return {
+        dishes:state.dishes,
+        games:state.games
+    }
+}
 class Main extends Component {
     constructor(props){
         super(props);
@@ -19,17 +29,15 @@ class Main extends Component {
     render(){
         const DishWithId = ({ match }) => {
             return (
-                <DishDetail
-                    dish={this.state.dishes.filter((dish) => dish.id === parseInt(match.params.dishId, 10))[0]}
-                    // comments={this.state.comments.filter((comment) => comment.dishId === parseInt(match.params.dishId, 10))}
+                <SubjectDetail
+                    dish={this.props.dishes.filter((dish) => dish.id === parseInt(match.params.dishId, 10))[0]}
                 />
             );
         };
         const GameWithId = ({ match }) => {
             return (
                 <GameDetail
-                    game={this.state.games.filter((game) => game.id === parseInt(match.params.gameId, 10))[0]}
-                    // comments={this.state.comments.filter((comment) => comment.dishId === parseInt(match.params.dishId, 10))}
+                    game={this.props.games.filter((game) => game.id === parseInt(match.params.gameId, 10))[0]}
                 />
             );
         };
@@ -37,15 +45,17 @@ class Main extends Component {
             <div>
                 <HeadComponent />
                 <Switch>
-                    <Route exact path='/menu' component={() => <MenuComponent dishes={this.state.dishes}/>} />
-                    <Route path='/menu/:dishId' component={DishWithId} />
-                    <Route exact path='/game' component={() => <GameComponent games={this.state.games}/>} />
+                    <Route exact path='/home' component={() => <HomeComponent dishes={this.props.dishes}/>} />
+                    <Route path='/home/:dishId' component={DishWithId} />
+                    <Route exact path='/game' component={() => <GameComponent games={this.props.games}/>} />
                     <Route path='/game/:gameId' component={GameWithId} />
-                    <Route path='/aboutus' component={AboutComponent} />
-                    <Redirect to='/menu'/>
+                    <Route path='/feedback' component={FeedbackComponent} />
+                    <Route path='/chicken' component={ChickenComponent} />
+                    <Redirect to='/home'/>
                 </Switch>
+                <FooterComponent />
             </div>
         )
     }
 }
-export default Main;
+export default withRouter(connect(mapStateToProps)(Main));
